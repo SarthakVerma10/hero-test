@@ -113,6 +113,7 @@ ul {
         display: none;
         right: 0;
         position: absolute;
+        padding: 20px;
     }
 
     .sidebar-button-mobile {
@@ -120,16 +121,23 @@ ul {
         top: 5%;
         color: #e8a964;
         padding: 5px;
+        font-size: 4vw;
     }
 
     .sidebar {
         width: 0;
         background-color: white;
+        padding: 0;
+        transition: 0.2s;
     }
 
     .hero {
-        margin-left: 5%;
+        margin: 0;
         width: 100%;
+    }
+
+    .hero-header {
+        font-size: 200%;
     }
 
     .header {
