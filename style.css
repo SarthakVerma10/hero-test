@@ -108,17 +108,23 @@ ul {
         display: none;
     }
 
+    #sidebar-button-close-mobile {
+        z-index: 1;
+        display: none;
+        right: 0;
+        position: absolute;
+    }
+
     .sidebar-button-mobile {
         display: block;
-        position: absolute;
         top: 5%;
         color: #e8a964;
-        padding: 2px;
+        padding: 5px;
     }
 
     .sidebar {
-        width: 5%;
-        background-color: aliceblue;
+        width: 0;
+        background-color: white;
     }
 
     .hero {

@@ -13,6 +13,8 @@
 <body>
     <header id="header" class="header">
         <ul class="actions">
+            <a class="sidebar-button-mobile" id="sidebar-button-open-mobile" onclick="open_sidebar_mobile()" href="#"><i class="fas fa-align-justify"></i></a>
+            <a class="sidebar-button-mobile" id="sidebar-button-close-mobile" onclick="close_sidebar_mobile()" href="#"><i class="fas fa-times"></i></a>
             <li><a>My Company</a></li>
         </ul>
         
@@ -40,8 +42,7 @@
             <li><i style="color: #e8a964" class="fas fa-link"></i> Option</li>
         </ul>
         
-        <a class="sidebar-button-mobile" id="sidebar-button-open-mobile" onclick="open_sidebar_mobile()" href="#"><i class="fas fa-align-justify"></i></a>
-        <a class="sidebar-button-mobile" id="sidebar-button-close-mobile" onclick="close_sidebar_mobile()" href="#"><i class="fas fa-align-justify"></i></a>
+        
         <a href="#" class="sidebar-button" id="sidebar-button-close" onclick="close_sidebar()">
             <i class="fas fa-arrow-alt-circle-left"></i></a>
         <a href="#" class="sidebar-button" id="sidebar-button-open"  onclick="open_sidebar()">
@@ -81,7 +82,7 @@
         }
 
         const close_sidebar_mobile = () => {
-            sidebar.style.width = "5%";
+            sidebar.style.width = "0";
             sidebar_button_open_mobile.style.display = "block"
             sidebar_button_close_mobile.style.display = "none"
         }
