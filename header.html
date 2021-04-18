@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b995eb29b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header id="header" class="header">
+        <ul class="actions">
+            <li><a>My Company</a></li>
+        </ul>
+        
+
+        <ul class="actions">
+            <li><i style="color: #e8a964" class="fas fa-clipboard-list fa-lg"></i></li>
+            <li><i style="color: #e8a964" class="fas fa-address-card fa-lg"></i></li>
+        </ul>
+    </header>
+
+    <div class="hero">
+        <p class="hero-header">Lets see what we can do?</p>
+        <p class="hero-subhead">ifend egestas. Praesent efficitur quis libero consectetur fringilla. Nulla non lacus luctus, tempus nisl nec, congue nibh. Maecenas tincidunt et nunc quis hendrerit. Aenean suscipit sem a odio ullamcorper, eget mollis urna sodales. Nunc tortor feugiat risus ullamcorper, sit amet posuere risus fermentum. Morbi vitae nisi mauris.</p>
+        <img src="./hero2.png" class="hero-img" alt="" srcset="">
+        <button class="hero-button">Action</button>
+    </div>
+
+    <div id="sidebar" class="sidebar">
+        <ul>
+            <li id="sidebar-header">Choose</li>
+            <br>
+            <li><i style="color: #e8a964" class="fas fa-link"></i> Option</li>
+            <li><i style="color: #e8a964" class="fas fa-link"></i> Option</li>
+            <li><i style="color: #e8a964" class="fas fa-link"></i> Option</li>
+            <li><i style="color: #e8a964" class="fas fa-link"></i> Option</li>
+        </ul>
+        
+        <a class="sidebar-button-mobile" id="sidebar-button-open-mobile" onclick="open_sidebar_mobile()" href="#"><i class="fas fa-align-justify"></i></a>
+        <a class="sidebar-button-mobile" id="sidebar-button-close-mobile" onclick="close_sidebar_mobile()" href="#"><i class="fas fa-align-justify"></i></a>
+        <a href="#" class="sidebar-button" id="sidebar-button-close" onclick="close_sidebar()">
+            <i class="fas fa-arrow-alt-circle-left"></i></a>
+        <a href="#" class="sidebar-button" id="sidebar-button-open"  onclick="open_sidebar()">
+            <i class="fas fa-arrow-alt-circle-right"></i></a>
+    </div>
+
+    
+
+    <script>
+        const sidebar = document.getElementById("sidebar");
+        const header = document.getElementById("header");
+        const sidebar_button_open = document.getElementById("sidebar-button-open");
+        const sidebar_button_close = document.getElementById("sidebar-button-close");
+
+        const open_sidebar = () => {
+            sidebar.style.width = "17%";
+            header.style.marginLeft = "250px";
+            sidebar_button_open.style.display = "none";
+            sidebar_button_close.style.display = "block";
+
+        }
+
+        const close_sidebar = () => {
+            sidebar.style.width = "40px";
+            header.style.marginLeft = "0";
+            sidebar_button_open.style.display = "block";
+            sidebar_button_close.style.display = "none";
+        }
+
+        const sidebar_button_open_mobile = document.getElementById("sidebar-button-open-mobile");
+        const sidebar_button_close_mobile = document.getElementById("sidebar-button-close-mobile");
+
+        const open_sidebar_mobile = () => {
+            sidebar.style.width = "100%";
+            sidebar_button_open_mobile.style.display = "none"
+            sidebar_button_close_mobile.style.display = "block"
+        }
+
+        const close_sidebar_mobile = () => {
+            sidebar.style.width = "5%";
+            sidebar_button_open_mobile.style.display = "block"
+            sidebar_button_close_mobile.style.display = "none"
+        }
+    </script>
+</body>
+</html>
